@@ -1,6 +1,16 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-image: url("./hotel_facade.jpg");
+  background-size: cover;
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

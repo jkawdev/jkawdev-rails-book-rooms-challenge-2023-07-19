@@ -1,0 +1,29 @@
+.room-cards {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+
+  .room-card {
+    width: 200px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+
+    .room-card-img {
+      width: 200px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
