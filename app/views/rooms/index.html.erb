@@ -3,7 +3,8 @@
 <div class="room-cards">
   <%= @rooms.each do |room| %>
     <div div class="room-card">
-      <%= image_tag "chambre 2.jpg", alt: "Le Wagon", class: "room-card-img" %>
+      <img src="<%= room.image %>" alt="chambre", class="room-card-img">
+      <%# <%= image_tag "chambre 2.jpg", alt: "chambre", class: "room-card-img" %>
       <div class="room-card-num">
         <h3>Chambre n° <%= room.id %></h3>
         <div class="room-card-infos">
@@ -11,7 +12,7 @@
           <p><strong><%= room.price_per_night %> € / nuit</strong></p>
         </div>
         <div class="room-card-button">
-          <%= link_to "Réservez-la", room_path(room), class: "room-card-button-cta"%>
+          <%= link_to "Voir la chambre", room_path(room), class: "room-card-button-cta btn btn-primary"%>
         </div>
       </div>
     </div>
