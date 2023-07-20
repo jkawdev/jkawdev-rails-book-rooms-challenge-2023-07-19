@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+body {
+  background-image: url("https://images.unsplash.com/photo-1662215522554-b26dab5465f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjBmYWNhZGUlMjBudWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60");
+  background-size: cover;
+}
+
+.home-selection {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+
+
+
+  .home-selection-title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+}

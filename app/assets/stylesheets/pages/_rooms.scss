@@ -1,8 +1,20 @@
+
+
+// -------------------VIEW ROOM INDEX ------------------------
+
+h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
 .room-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   overflow: hidden;
+
 
   h3 {
     font-size: 25px;
@@ -17,6 +29,12 @@
     margin: 10px;
     overflow: hidden;
     text-align: center;
+    background-color: white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateX(0px) translateY(-5px);
+    }
 
     .room-card-img {
       width: 400px;
@@ -29,32 +47,60 @@
     }
 
     .room-card-num {
-      padding-top: 15px;
+      margin-left: 20px;
       padding-bottom: 15px;
     }
+
   }
 }
 
+// -------------------VIEW ROOM SHOW ------------------------
+
+// .room-card-show {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 1000px;
+//   padding-top: 20px;
+
+// }
+
 .room-card-detail {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+    margin:auto;
   box-shadow: 5px 5px 5px black;
-  width: 420px;
+  width: 900px;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 
   .room-card-details-img {
-    width: 400px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     justify-content: center;
-    padding: 10px;
+    // padding: 10px;
 
     .room-card-img {
-      width: 160px;
-      height: 160px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  .room-card-num {
+    margin-left: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+
+    .new_booking {
+      padding-top: 5px;
     }
   }
 }

@@ -1,2 +1,9 @@
 <%# <p>Find me in app/views/pages/home.html.erb</p> %>
-<h1>Quelques sélections de chambres en France</h1>
+
+<div class="home-selection">
+
+  <h1><%= link_to "Quelques sélections de chambres en France :", rooms_path, class: "home-selection-title" %>
+  <span data-controller="typed" data-typed-rooms-values=""></span>
+  </h1>
+
+</div>

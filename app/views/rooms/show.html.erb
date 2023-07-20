@@ -1,35 +1,32 @@
-<h1>Votre chambre</h1>
+<div class="room-card-show">
+  <h1>Votre chambre</h1>
 
 
-<div div class="room-card-detail">
-  <div class="room-card-details-img">
-    <%= image_tag "chambre 2.jpg", alt: "chambre", class: "room-card-img" %>
-    <%= image_tag "chambre 1 acc1.jpg", alt: "chambre", class: "room-card-img" %>
-    <%= image_tag "chambre 1 acc2.jpg", alt: "chambre", class: "room-card-img" %>
-    <%= image_tag "chambre 1 acc3.jpg", alt: "chambre", class: "room-card-img" %>
-  </div>
-  <div class="room-card-num">
-    <h3>Chambre n° <%= @room.id %></h3>
-    <div class="room-card-infos">
-      <p>Nb de personnes max : <%= @room.capacity %></p>
-      <p><strong><%= @room.price_per_night %> € / nuit</strong></p>
+  <div div class="room-card-detail">
+    <div class="room-card-details-img">
+      <%= image_tag "chambre 2.jpg", alt: "chambre", class: "room-card-img" %>
+      <%= image_tag "chambre 1 acc1.jpg", alt: "chambre", class: "room-card-img" %>
+      <%= image_tag "chambre 1 acc2.jpg", alt: "chambre", class: "room-card-img" %>
+      <%= image_tag "chambre 1 acc3.jpg", alt: "chambre", class: "room-card-img" %>
     </div>
-
-
-
-    <div data-controller="toggle" class="mt-5">
-      <button class="btn btn-outline-primary">Réservez-la !</button>
-      <div>
-        <%= simple_form_for(@booking, url: room_bookings_path(@room)) do |f| %>
-          <label class="form-label string optional" for="">Dates</label>
-          <input class="form-input-select" class="new-booking-date-input" type="string" placeholder='Sélectionnez vos dates' data-controller="datepicker">
-          <%= f.input :starts_at, as: :hidden, input_html: { id: "start_date" } %>
-          <%= f.input :ends_at, as: :hidden, input_html: { id: "end_date" } %>
-          <%= f.submit "Nouvelle réservation", class: "btn btn-primary" %>
-        <% end %>
+    <div class="room-card-num">
+      <h3>Chambre n° <%= @room.id %></h3>
+      <div class="room-card-infos">
+        <p>Nb de personnes max : <%= @room.capacity %></p>
+        <p><strong><%= @room.price_per_night %> € / nuit</strong></p>
       </div>
+      <div data-controller="toggle" class="mt-5">
+        <button data-action="click->toggle#fire" class="btn btn-primary">Réservez-la !</button>
+        <div data-toggle-target="togglableElement" class="d-none room-form">
+          <%= simple_form_for(@booking, url: room_bookings_path(@room)) do |f| %>
+            <label class="form-label string optional" for="">Dates</label>
+            <input class="form-input-select" class="new-booking-date-input" type="string" placeholder='Sélectionnez vos dates' data-controller="datepicker">
+            <%= f.input :starts_at, as: :hidden, input_html: { id: "start_date" } %>
+            <%= f.input :ends_at, as: :hidden, input_html: { id: "end_date" } %>
+            <%= f.submit "Nouvelle réservation", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
-
     </div>
   </div>
 </div>
