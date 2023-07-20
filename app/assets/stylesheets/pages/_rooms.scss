@@ -56,15 +56,20 @@ h1 {
 
 // -------------------VIEW ROOM SHOW ------------------------
 
-// .room-card-show {
+.room-card-show {
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: center;
 //   align-items: center;
 //   width: 1000px;
 //   padding-top: 20px;
+  text-align: center;
+a {
+  margin-top: 10px;
+}
+}
 
-// }
+
 
 .room-card-detail {
   display: flex;
@@ -103,4 +108,5 @@ h1 {
       padding-top: 5px;
     }
   }
+
 }
