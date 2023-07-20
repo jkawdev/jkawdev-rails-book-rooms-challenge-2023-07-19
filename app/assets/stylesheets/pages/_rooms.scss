@@ -29,7 +29,7 @@ h1 {
     margin: 10px;
     overflow: hidden;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease;
 
     &:hover {
@@ -75,7 +75,7 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 
   .room-card-details-img {

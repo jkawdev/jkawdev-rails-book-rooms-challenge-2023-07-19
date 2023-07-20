@@ -23,10 +23,14 @@
             <input class="form-input-select" class="new-booking-date-input" type="string" placeholder='Sélectionnez vos dates' data-controller="datepicker">
             <%= f.input :starts_at, as: :hidden, input_html: { id: "start_date" } %>
             <%= f.input :ends_at, as: :hidden, input_html: { id: "end_date" } %>
+            <input type="hidden" name="booking[user_id]" value="1">
             <%= f.submit "Nouvelle réservation", class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <span><%= link_to "Retour à la liste", rooms_path, class: "room-card-button-cta btn btn-primary"%></span>
   </div>
 </div>
